@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    .container
+        .row.page-header
+            .col-lg-12
+                h1 Sign In
+
+        .row
+            .col-xs-12.col-md-6.col-md-offset-3
+                form#signin.form-horizontal(action='url', method='post', role='form')
+                    .form-group
+                        label.col-xs-3.control-label(for='name') Name
+                        .col-xs-9
+                            input#name.form-control(name='name', type='text', placeholder='Enter your name')
+
+                    .form-group
+                        label.col-xs-3.control-label(for='password') Password
+                        .col-xs-9
+                            input#password.form-control(name='password', type='password', placeholder='Enter your password')
+
+                    .form-group
+                        .col-xs-offset-3.col-xs-9
+                            a.btn.btn-primary(href='/location/review/new') Sign In
+

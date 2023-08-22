@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  .container
+    .row.page-header
+      .col-lg-12
+        h1= title
+
+    .row
+      .col-xs-12.col-md-8
+        form#addReview.form-horizontal(action= 'url', method='post', role='form')
+          .form-group
+            label.col-sm-2.control-label(for='name') Name
+            .col-sm-10
+              input#name.form-control(name='name')
+
+          .form-group
+            label.col-sm-2.control-label(for='rating') Rating
+            .col-sm-10
+              select#rating.form-control.input-sm(name='rating')
+                option 5
+                option 4
+                option 3
+                option 2
+                option 1
+          .form-group
+            label.col-sm-2.control-label(for='rating') Movie
+            .col-sm-10
+              select#rating.form-control.input-sm(name='rating')
+                option Oppenheimer
+                option Guardians of the Galaxy vol 3
+                option John wick 4
+                option Spider-man: across the spider-verse
+                option Meg 2
+                option Mission impossible
+                option Sound of freedom
+                option The flash
+                option Indiana Jones
+                option Mahaveeran
+                option Jailer
+                option Fast X
+
+          .form-group
+            label.col-sm-2.control-label(for='review') Review
+            .col-sm-10
+              textarea#review.form-control(name='review', rows='5')
+
+          .form-group
+            .col-sm-offset-2.col-sm-10
+              a.btn.btn-primary(href='/') Add my review
